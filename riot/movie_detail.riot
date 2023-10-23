@@ -1,0 +1,24 @@
+<movie-detail class="global">
+    <a href="index.html"><h2>Retour</h2></a>
+    <div class="main-info">
+        <h2>{props.title}</h2>
+        <img src={props.src} alt={props.title}>
+    </div>
+    <div class="secondary-info">
+        <h3 class="detail-categories">{props.categories}</h3>
+        <h3>{props.date}</h3>
+        <span class="pays">{props.countrie}</span>
+        <h3>{props.director}</h3>
+        <h3>{props.actorname}</h3>
+        <div class="actors">
+            <img src={props.srcactorone}></img>
+            <img src={props.srcactortwo}></img>
+            <img src={props.srcactorthree}></img>
+        </div>
+        <h3>{props.resume}</h3>
+        <div class="detail-rate">
+            <h3 class="rate">{props.rate}</h3>
+            <h3 class="amount">{props.rateamount}</h3>
+        </div>
+    </div>
+</movie-detail>

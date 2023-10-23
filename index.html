@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Cinema Kévin METRI</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="riot/list_cell.riot" type="riot"></script>
+	<script src="riot/page_choice.riot" type="riot"></script>
+	<script src="https://cdn.jsdelivr.net/npm/riot@6.1.2/riot+compiler.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="container-fluid full-width">
+				<div class="row-fluid">
+					<form id="form">
+						<textarea class="search" type="text" placeholder="Rechercher" id="search"oninput="changeCategorie('search')"></textarea>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	
+
+	</div>
+
+	<button class="main-button" id="TriNote" style="left: 0;" onclick="TriNote()">Note</button>
+	<button class="main-button" id="TriTitre" style="right: 0;" onclick="TriTitle()">Titre</button>
+
+
+	<div class="button-row">
+		<div class="container">
+			<div class="container-fluid full-width">
+				<div class="row-fluid">
+					<select class="select-genres" id="selectGenres"></select>
+					<button class="main-button" id="btnPopulaires" onclick="changeCategorie('popular')">Populaires</button>
+					<button class="main-button" id="btnMieuxNotes" onclick="changeCategorie('top_rated')">Mieux notés</button>
+					<button class="main-button" id="btnAVenir" onclick="changeCategorie('upcoming')">À venir</button>
+					<button class="main-button" id="btnAlAffiche" onclick="changeCategorie('now_playing')">À l'affiche</button>
+					<select class="select-genres"id="selectSerie">
+						<option value="movie"> Films</option>
+						<option value="tv"> Séries</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="select-page" id="selectPage_haut">
+	
+
+		<page-choice current="1" class="select-page"></page-choice>
+	</div>
+
+	<main id="mainIndex">
+		<h3 id="genre"></h3>
+	</main>
+	<div class="select-page" id="selectPage_bas">
+		<page-choice current="1" class="select-page"></page-choice>
+	</div>
+
+	<script>riot.compile().then(()=>{riot.mount('list-cell');});</script>
+	<script>riot.compile().then(()=>{riot.mount('page-choice');});</script>
+	<script src="js/app.js"></script>
+</body>
+</html>

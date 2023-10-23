@@ -1,0 +1,261 @@
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #313178;
+}
+
+.colo{
+    background-color: #313178
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid #4E4E94;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: white;
+}
+
+.search:focus{
+    outline: 0;
+    background-color: #313178;
+}
+
+.search::placeholder{
+    color: #7378C5;
+}
+
+.button-row {
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    background-color: #313178;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 225px;
+}
+
+.movie-info span {
+    background-color: #4E4E94;
+    padding: 0.75rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.movie:hover{
+    background-color: #4E4E94;
+}
+
+.movie:hover span{
+    background-color: #7378C5;
+}
+
+.main-button {
+    transition-duration: 0.2s;
+    background-color: #313178;
+    border: 2px solid #4E4E94;
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    width: 200px;
+}
+
+.main-button:hover{
+    background-color: #4E4E94;
+}
+
+.select-genres{
+    background-color: #313178;
+    border: 2px solid #4E4E94;
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    width: 200px;
+}
+
+.select-genres:hover {
+    background-color: #4E4E94;
+}
+
+.select-page {
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.select-page a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 18px 16px;
+  }
+  
+.select-page a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.previous {
+    background-color: white;
+    color: blue;
+}
+  
+.next {
+    background-color: white;
+    color: blue;
+}
+  
+.round {
+    border-radius: 50%;
+}
+
+.global {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main-info {
+    width: 50%;
+    float: left;  
+    justify-items: center;
+}
+
+.main-info h2{
+    text-align: center;
+    font: bold 1.8em "Fira Sans", sans-serif;
+}
+
+.main-info img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.secondary-info {
+    margin-top: 75px;
+    margin-right: 150px;
+}
+
+.secondary-info h3 {
+    font: 1.2em "Fira Sans", sans-serif;
+}
+
+.secondary-info .detail-categories {
+    font: bold 1.2em "Fira Sans", sans-serif;
+}
+
+.actors {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.actors img {
+    width: 20%;
+    margin-right: 25px;
+}
+
+.detail-rate {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.detail-rate .rate {
+    float: left;
+}
+
+.detail-rate .amount {
+    float: right;
+}
+
+.loader-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    transition: opacity 1sec ease-in-out, visibility ease-in-out ;
+}
+
+.loader{
+    width: 120px;
+    height: 120px;
+    border: 16px solid #e5e5e5;
+    border-radius: 50%;
+    border-top: 16px solid #313178 ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 2) ;
+    transform:translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: loader 1s linear infinite;
+}
+
+@keyframes loader{
+    100%{
+        transform:translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+}
+
+.loader-container.hidden{
+   opacity: 0;
+   visibility: hidden;
+   display: none;
+}
+
+.genre{
+    text-decoration: none;
+    background-color: #daf1e0;
+    color: #478f79;
+    font-size:17px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+.pays{
+    color: #5b9f98;
+    background-color: #ddf3e4;
+    font-size: 25px;
+}
